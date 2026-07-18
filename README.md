@@ -6,7 +6,7 @@
 
 Enterprise-grade Blue Team tool for monitoring Linux servers, detecting security threats, and visualizing system health in real-time.
 
-<img src="images/dashboard.png" width="900"/>
+<img src="images/Capture d'écran 2026-07-18 165947.png" width="900"/>
 
 <br>
 
