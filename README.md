@@ -60,7 +60,7 @@ Unlike traditional log viewers, NetGuard continuously analyzes incoming logs, de
 
 ## 🚨 Discord Notification
 
-![Discord](images/discord_alert.png)
+![Discord](images/discord.png)
 
 ---
 
