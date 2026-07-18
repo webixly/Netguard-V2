@@ -58,7 +58,7 @@ stats = {
     "webhook_count": 0
 }
 
-DISCORD_WEBHOOK_URL = "https://discord.com/api/webhooks/1497317645916045343/0Nu49MT9owweBVt8A22jZE88cygsZtcmE9BbU5Zu1C0MKxeoAs-x23BVfN62mSzCSqBF" 
+DISCORD_WEBHOOK_URL = "" 
 
 def send_discord_alert(attack_type: str, severity: str, log_line: str) -> bool:
     """ترسل تنبيهاً فورياً منسقاً إلى ديسكورد وترجع True في حال النجاح"""
