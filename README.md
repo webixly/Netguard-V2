@@ -54,7 +54,7 @@ Unlike traditional log viewers, NetGuard continuously analyzes incoming logs, de
 
 ## 🖥 Main Dashboard
 
-![Dashboard](images/dashboard.png)
+![Dashboard](images/Capture d'écran 2026-07-18 171211.png)
 
 ---
 
