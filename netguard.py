@@ -35,7 +35,7 @@ def main() -> None:
                 )
                 layout["counters"].update(Panel(counters_text, title="📊 Live Threat Indicators", border_style="bright_black"))
 
-                # 2. جلب موارد السيرفر وتحديث القائمة الجانبية (System Summary)
+                
                 cpu, ram, disk = get_system_usage()
                 cpu_color = "green" if cpu < 70 else "yellow" if cpu < 90 else "red"
                 ram_color = "green" if ram < 70 else "yellow" if ram < 90 else "red"
