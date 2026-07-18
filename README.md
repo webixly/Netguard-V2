@@ -21,8 +21,7 @@ Enterprise-grade Blue Team tool for monitoring Linux servers, detecting security
 
 # 📖 Overview
 
-NetGuard V2 is an advanced Blue Team monitoring dashboard designed to detect suspicious activities from Linux log files while simultaneously monitoring server resources.
-
+NetGuard V2 is an advanced Blue Team monitoring dashboard that continuously analyzes Linux logs, monitors system resources, and instantly delivers security alerts to Discord whenever malicious activity is detected.
 Unlike traditional log viewers, NetGuard V2 combines:
 
 - 🔍 Threat Detection
@@ -34,6 +33,47 @@ into one lightweight terminal application.
 
 ---
 
+# 🚨 Discord Alert System
+
+NetGuard V2 supports **real-time Discord webhook notifications**, allowing security teams to receive instant alerts whenever suspicious activity is detected.
+
+Instead of constantly monitoring terminal logs, administrators are notified immediately through a dedicated Discord channel.
+
+### Alert Information
+
+Each notification contains:
+
+- 🚨 Threat Type
+- 🌐 Source IP Address
+- 📄 Log Entry
+- ⏰ Detection Timestamp
+- 🔥 Severity Level (Low / Medium / High)
+
+### Example Notification
+
+```text
+🚨 SECURITY ALERT
+
+Threat: SQL Injection
+Severity: HIGH
+
+Source IP:
+192.168.1.55
+
+Log:
+GET /login.php?id=' OR 1=1--
+
+Time:
+2026-07-18 14:53 UTC
+```
+
+### Benefits
+
+- Instant incident awareness
+- Remote monitoring from any device
+- Faster response time
+- Team collaboration through Discord channels
+- Works 24/7 without keeping the terminal open
 # ✨ Features
 
 ## 🔐 Threat Detection
@@ -68,7 +108,12 @@ into one lightweight terminal application.
 - High Severity Alerts
 - Threat Classification
 - Real-time Notifications
-
+- Discord Webhook Integration
+- Instant Security Notifications
+- Severity Classification
+- Remote Monitoring
+- Custom Webhook Support
+  
 ---
 
 # 🖥 Dashboard Preview
