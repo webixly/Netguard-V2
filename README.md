@@ -4,135 +4,133 @@
 
 ### Advanced Infrastructure Security Dashboard
 
-Enterprise-grade Blue Team tool for monitoring Linux servers, detecting security threats, and visualizing system health in real-time.
+Enterprise-grade Blue Team tool for monitoring Linux infrastructure, detecting cyber threats, and visualizing system health in real-time through an interactive terminal dashboard.
 
-<img src="images/Capture d'écran 2026-07-18 165947.png" width="900"/>
-
-<br>
-
-![Python](https://img.shields.io/badge/Python-3.10+-blue?style=for-the-badge&logo=python)
-![Platform](https://img.shields.io/badge/Linux-Supported-black?style=for-the-badge&logo=linux)
-![License](https://img.shields.io/badge/License-MIT-success?style=for-the-badge)
-![Status](https://img.shields.io/badge/Status-Stable-success?style=for-the-badge)
+![Python](https://img.shields.io/badge/Python-3.10+-3776AB?style=for-the-badge&logo=python)
+![Platform](https://img.shields.io/badge/Linux-Supported-FCC624?style=for-the-badge&logo=linux&logoColor=black)
+![Rich](https://img.shields.io/badge/UI-Rich-FF6B6B?style=for-the-badge)
+![Discord](https://img.shields.io/badge/Alerts-Discord-5865F2?style=for-the-badge&logo=discord)
+![Status](https://img.shields.io/badge/Status-Active-success?style=for-the-badge)
 
 </div>
 
 ---
 
-# 📖 Overview
+# 📖 Table of Contents
 
-NetGuard V2 is an advanced Blue Team monitoring dashboard that continuously analyzes Linux logs, monitors system resources, and instantly delivers security alerts to Discord whenever malicious activity is detected.
-Unlike traditional log viewers, NetGuard V2 combines:
-
-- 🔍 Threat Detection
-- 📊 Live Infrastructure Monitoring
-- 🚨 Instant Discord Alerts
-- 🖥️ Rich Terminal Dashboard
-
-into one lightweight terminal application.
+- Overview
+- Preview
+- Features
+- Architecture
+- Discord Alerting
+- Installation
+- Usage
+- Detection Engine
+- Project Structure
+- Roadmap
+- Tech Stack
+- Author
 
 ---
 
-# 🚨 Discord Alert System
+# 📖 Overview
 
-NetGuard V2 supports **real-time Discord webhook notifications**, allowing security teams to receive instant alerts whenever suspicious activity is detected.
+NetGuard V2 is a real-time Linux security monitoring platform built for Blue Team operations.
 
-Instead of constantly monitoring terminal logs, administrators are notified immediately through a dedicated Discord channel.
+It combines:
 
-### Alert Information
+- 🔍 Live Threat Detection
+- 📊 Infrastructure Monitoring
+- 🚨 Discord Alerting
+- 🖥 Rich Terminal Dashboard
 
-Each notification contains:
+into one lightweight security monitoring solution.
 
-- 🚨 Threat Type
-- 🌐 Source IP Address
-- 📄 Log Entry
-- ⏰ Detection Timestamp
-- 🔥 Severity Level (Low / Medium / High)
+Unlike traditional log viewers, NetGuard continuously analyzes incoming logs, detects malicious activity, monitors server resources, and immediately notifies administrators through Discord.
 
-### Example Notification
+---
 
-```text
-🚨 SECURITY ALERT
+# 📸 Preview
 
-Threat: SQL Injection
-Severity: HIGH
+## 🖥 Main Dashboard
 
-Source IP:
-192.168.1.55
+![Dashboard](images/dashboard.png)
 
-Log:
-GET /login.php?id=' OR 1=1--
+---
 
-Time:
-2026-07-18 14:53 UTC
-```
+## 🚨 Discord Notification
 
-### Benefits
+![Discord](images/discord_alert.png)
 
-- Instant incident awareness
-- Remote monitoring from any device
-- Faster response time
-- Team collaboration through Discord channels
-- Works 24/7 without keeping the terminal open
+---
+
 # ✨ Features
 
 ## 🔐 Threat Detection
 
-- SSH Brute Force Detection
-- SQL Injection Detection
-- XSS Detection
+- SSH Brute Force
+- Failed Authentication Attempts
+- SQL Injection (SQLi)
+- Cross-Site Scripting (XSS)
 - Directory Traversal
 - Web Shell Detection
-- Remote Code Execution Patterns
-- Log4Shell Detection
-- Nmap Scan Detection
+- Remote Code Execution (RCE)
+- Log4Shell Indicators
+- Nmap Detection
 - Port Scan Detection
 - DoS Indicators
-- Crypto Miner Indicators
+- Crypto Miner Detection
 
 ---
 
 ## 📊 Infrastructure Monitoring
 
-- CPU Usage
-- RAM Usage
-- Disk Usage
-- Color-coded Resource Status
-- Live Updates
+- Live CPU Monitoring
+- Live RAM Monitoring
+- Live Disk Usage
+- Color-coded Health Status
+- Continuous Resource Updates
 
 ---
 
-## 🚨 Alerting
+## 🚨 Discord Alerting
 
-- Discord Webhooks
-- High Severity Alerts
-- Threat Classification
-- Real-time Notifications
-- Discord Webhook Integration
-- Instant Security Notifications
-- Severity Classification
+NetGuard V2 instantly sends security alerts to Discord using Webhooks.
+
+Each notification contains:
+
+- Threat Type
+- Severity Level
+- Source IP
+- Timestamp
+- Detection Module
+- Original Log Entry
+
+### Benefits
+
+- Instant Incident Response
 - Remote Monitoring
-- Custom Webhook Support
-  
----
-
-# 🖥 Dashboard Preview
-
-## Main Dashboard
-
-<img src="images/dashboard.png"/>
+- Team Collaboration
+- Mobile Notifications
+- 24/7 Alerting
 
 ---
 
-## Threat Detection
+# 🏗 Architecture
 
-<img src="images/alerts.png"/>
-
----
-
-## Live Monitoring
-
-<img src="images/resources.png"/>
+```
+                Linux Log File
+                       │
+                       ▼
+             Log Streaming Engine
+                       │
+                       ▼
+            Regex Detection Engine
+                       │
+          ┌────────────┴────────────┐
+          ▼                         ▼
+ Rich Terminal Dashboard     Discord Webhook
+```
 
 ---
 
@@ -150,11 +148,13 @@ pip install -r requirements.txt
 
 # 🚀 Usage
 
+Analyze a sample log:
+
 ```bash
 python netguard.py --watch sample.log
 ```
 
-or
+Analyze a production log:
 
 ```bash
 python netguard.py --watch /var/log/auth.log
@@ -167,30 +167,18 @@ python netguard.py --watch /var/log/auth.log
 ```
 Netguard-V2/
 
-│
-
 ├── core/
-
-│ ├── log_watcher.py
-
-│ ├── monitor.py
-
-│ └── scanner.py
-
+│   ├── log_watcher.py
+│   ├── monitor.py
+│   └── scanner.py
 │
-
 ├── ui/
-
-│ └── display.py
-
+│   └── display.py
 │
-
 ├── images/
-
+│
 ├── requirements.txt
-
 ├── sample.log
-
 └── netguard.py
 ```
 
@@ -198,48 +186,46 @@ Netguard-V2/
 
 # ⚡ Detection Engine
 
-NetGuard V2 continuously analyzes log streams using a high-performance regex engine capable of identifying:
-
 | Category | Detection |
-|----------|-----------|
-| Authentication | Brute Force |
-| Web | SQLi |
+|-----------|-----------|
+| Authentication | SSH Brute Force |
+| Authentication | Failed Password |
+| Web | SQL Injection |
 | Web | XSS |
 | Web | Directory Traversal |
+| Exploitation | Remote Code Execution |
 | Malware | Web Shell |
-| Exploitation | RCE |
-| Reconnaissance | Nmap |
+| Malware | Log4Shell |
+| Reconnaissance | Nmap Scan |
 | Network | Port Scan |
-| Infrastructure | DoS |
+| Infrastructure | DoS Indicators |
 | Malware | Crypto Mining |
 
 ---
 
 # 🌍 Real-World Use Cases
 
-✔ Linux Servers
-
-✔ SOC Monitoring
-
-✔ Blue Team Operations
-
-✔ Home Labs
-
-✔ VPS Monitoring
-
-✔ Security Training
+- Linux Server Monitoring
+- Security Operations Centers (SOC)
+- Blue Team Labs
+- VPS Monitoring
+- Home Labs
+- Security Training
+- Infrastructure Auditing
 
 ---
 
 # 📈 Roadmap
 
-- [x] Threat Detection
-- [x] Resource Monitoring
-- [x] Discord Alerts
-- [ ] IP Auto Blocking
-- [ ] Email Notifications
-- [ ] Web Dashboard
+- [x] Threat Detection Engine
+- [x] Infrastructure Monitoring
+- [x] Discord Webhook Alerts
+- [ ] Automatic IP Blocking
 - [ ] Multi-Log Monitoring
+- [ ] Email Notifications
+- [ ] Telegram Notifications
+- [ ] Web Dashboard
+- [ ] SIEM Integration
 - [ ] AI Threat Classification
 
 ---
@@ -251,15 +237,22 @@ NetGuard V2 continuously analyzes log streams using a high-performance regex eng
 - Psutil
 - Requests
 - Regex
-- Linux Logs
+- Linux Log Monitoring
+- Discord Webhooks
+
+---
+
+# 📄 License
+
+This project is released under the MIT License.
 
 ---
 
 # 👨‍💻 Author
 
-### Ayman
+## Ayman
 
-Blue Team • Infrastructure Security • Python Developer
+**Blue Team • Infrastructure Security • Python Developer**
 
 GitHub:
 
@@ -269,6 +262,6 @@ https://github.com/webixly
 
 <div align="center">
 
-⭐ Star the project if you find it useful.
+⭐ If you find this project useful, consider giving it a star.
 
 </div>
